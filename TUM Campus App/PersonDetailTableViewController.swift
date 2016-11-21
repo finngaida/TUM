@@ -90,7 +90,7 @@ extension PersonDetailTableViewController {
                 let cell = tableView.dequeueReusableCell(withIdentifier: data.getCellIdentifier()) as? CardTableViewCell ?? CardTableViewCell()
                 cell.setElement(data)
                 return cell
-            }
+            } else { return UITableViewCell() }
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact") ?? UITableViewCell()
         cell.textLabel?.text = contactInfo[indexPath.row].0.rawValue
